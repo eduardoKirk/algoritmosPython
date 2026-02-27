@@ -37,36 +37,42 @@
 # segundo = (32/100) * valor 
 # terceiro = (22/100) * valor 
 # print(f"primeiro: {primeiro}R$ \n segundo: {segundo}R$ \n terceiro: {terceiro}R$")
-
 valor_da_compra = float(input("valor da compra: "))
 valor_pago = float(input("valor pago: "))
 troco = valor_pago - valor_da_compra
-print("troco: ", troco)
-print("EM: ")
-while troco >= 0:
-    if troco >= 100:
-        for i in range(int(troco/100)):
-            troco = troco - 100
-        print(f"R$ 100,00       {i + 1} cedulas")
-    elif 100 > troco >= 50:
-        for i in range(int(troco/50)):
-            troco = troco - 50
-        print(f"R$ 50,00       {i + 1} cedulas")
-    elif 50 > troco >= 20:
-        for i in range(int(troco/20)):
-            troco = troco - 20
-        print(f"R$ 20,00       {i + 1} cedulas")
-    elif 20 > troco >= 10:
-        for i in range(int(troco/10)):
-            troco = troco - 10
-        print(f"R$ 10,00       {i + 1} cedulas")
-    elif 10 > troco >= 5:
-        for i in range(int(troco/5)):
-            troco = troco - 5
-        print(f"R$ 5,00       {i + 1} cedulas")
-    elif 5 > troco >= 1:
-        for i in range(int(troco/1)):
-            troco = troco - 1
-        print(f"R$ 1,00       {i + 1} cedulas")
+def algBom(troco):
+    print("troco: ", troco)
+    print("EM: ")
+    while troco >= 0:
+        if troco >= 100:
+            for i in range(int(troco/100)):
+                troco = troco - 100
+            print(f"R$ 100,00       {i + 1} cedulas")
+        elif 100 > troco >= 50:
+            for i in range(int(troco/50)):
+                troco = troco - 50
+            print(f"R$ 50,00       {i + 1} cedulas")
+        elif 50 > troco >= 20:
+            for i in range(int(troco/20)):
+                troco = troco - 20
+            print(f"R$ 20,00       {i + 1} cedulas")
+        elif 20 > troco >= 10:
+            for i in range(int(troco/10)):
+                troco = troco - 10
+            print(f"R$ 10,00       {i + 1} cedulas")
+        elif 10 > troco >= 5:
+            for i in range(int(troco/5)):
+                troco = troco - 5
+            print(f"R$ 5,00       {i + 1} cedulas")
+        elif 5 > troco >= 1:
+            for i in range(int(troco/1)):
+                troco = troco - 1
+            print(f"R$ 1,00       {i + 1} cedulas")
 
-print('efn')
+def algRuim(troco):
+    notasCem = troco // 100
+    notasCinquenta = (troco - (100 * notasCem)) // 50
+    notasVinte = (troco - (50 * notasCinquenta)) // 20
+
+    print(notasCem, notasCinquenta, notasVinte)
+algRuim(troco)
