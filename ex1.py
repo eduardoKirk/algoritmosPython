@@ -69,3 +69,4 @@ while troco >= 0:
             troco = troco - 1
         print(f"R$ 1,00       {i + 1} cedulas")
 
+print('efn')
