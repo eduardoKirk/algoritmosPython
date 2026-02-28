@@ -71,8 +71,16 @@ def algBom(troco):
 
 def algRuim(troco):
     notasCem = troco // 100
-    notasCinquenta = (troco - (100 * notasCem)) // 50
-    notasVinte = (troco - (50 * notasCinquenta)) // 20
-
-    print(notasCem, notasCinquenta, notasVinte)
+    trocoAt = troco - (100 * notasCem)
+    notasCinquenta = trocoAt // 50
+    trocoAt = trocoAt - (50*notasCinquenta)
+    notasVinte = trocoAt // 20
+    trocoAt = trocoAt - (20*notasVinte)
+    notasDez = trocoAt // 10
+    trocoAt = trocoAt - (10*notasDez)
+    notasCinco = trocoAt // 5
+    trocoAt = trocoAt - (5*notasCinco)
+    notasUm = trocoAt
+    print(f"EM\nR$ 100,00       {notasCem} cedulas\nR$ 50,00       {notasCinquenta} cedulas\nR$ 20,00       {notasVinte} cedulas\nR$ 10,00       {notasDez} cedulas\nR$ 5,00       {notasCinco} cedulas\nR$ 1,00       {notasUm} cedulas")
+    
 algRuim(troco)
