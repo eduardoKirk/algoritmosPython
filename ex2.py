@@ -23,7 +23,7 @@
 # preco = float(input("preco do metro de tela: "))
 # print((compr * altura) * preco, "R$")
 
-numero = input("numero: ")
-
-print(f"{numero[2]}{numero[1]}{numero[0]}")
+numero = int(input("numero: "))
+invertido = int(str(numero)[::-1])
+print(invertido)
 
