@@ -1,3 +1,5 @@
+from rich import print
+
 # faren = float(input("temperatura em Fahrenheit:"))
 # celsius = (faren - 32) * 5/9
 # print('celsius: ', celsius)
@@ -23,7 +25,6 @@
 # preco = float(input("preco do metro de tela: "))
 # print((compr * altura) * preco, "R$")
 
-numero = int(input("numero: "))
-invertido = int(str(numero)[::-1])
-print(invertido)
-
+# numero = int(input("numero: "))
+# invertido = int(str(numero)[::-1])
+# print(f"[red]{invertido} [/red]")
